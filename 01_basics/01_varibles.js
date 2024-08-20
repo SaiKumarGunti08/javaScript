@@ -1,4 +1,4 @@
-const accountId=12332
+const accountId=1233
 let accountEmail="sai@gmail.com"
 var accPass="123Sai"
 accountCity="hyd"   // a variable cound be declared but not a best prectice

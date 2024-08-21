@@ -34,3 +34,30 @@ const MyFunction=function(){
 MyFunction() //calling a function
 
 console.log(typeof ArrayValue); //try with all
+
+
+
+
+
+//***********************************************************************************************************************
+ // Memory Allocation
+//Memoory allocation are of two types Stack And Heap
+
+//Stack(Premative) the data is stored as copies 
+
+let firstName="sai"
+let nickName=firstName
+nickName="chintu"
+
+console.log(firstName);
+console.log(nickName);
+
+let company={
+    Name:"wipro"
+}
+let company2=company
+company2={
+    Name:"apple"
+}
+console.log(company.Name)
+console.log(company2.Name)

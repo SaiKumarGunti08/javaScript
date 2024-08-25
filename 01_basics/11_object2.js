@@ -53,4 +53,6 @@ const course={
     instructor:"sai",
     subject:"js"
 }
-const {instructor}=course//=> here course is object {}=> in this values that are destructured
+const {instructor:teacher,subject}=course//=> here course is object {}=> in this values that are destructured
+
+console.log(teacher,subject);

@@ -35,7 +35,8 @@ console.log(Array.from({name:"sai"}));//here it prints empty object as keys or p
 let a=100
 let b=200
 let c=300
-console.log(Array.of(a,b,c));//of() operator prints the different data in a single array
+console.log(Array.of(a,b,c));//of() operator create a new array from a set of elements
+
 
 
 

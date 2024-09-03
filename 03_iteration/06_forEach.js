@@ -48,10 +48,17 @@ objArr.forEach((data)=>{
     
 })
 
+//
 //if we want give conditions and store it in a variable
 
 const numbers=[1,2,3,4,5,6,7,8,9,10]
 let NumberGraterThanFour=[]
+// let NumberGraterThanFour=numbers.forEach( (num)=>{  //foreach cant store values directly into a variable
+//     if(num>4){
+//         NumberGraterThanFour.push(num)
+//     }
+// } )
+
 numbers.forEach( (num)=>{
     if(num>4){
         NumberGraterThanFour.push(num)

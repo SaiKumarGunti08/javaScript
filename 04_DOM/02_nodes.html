@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodes with sai</title>
+</head>
+<body style="background-color: #121212; color: aliceblue;" >
+    <div>
+        <h1 class="heading">Nodes Topic</h1>
+    </div>
+    <script>
+        //for creating elements setting the attributes values etc
+        const div=document.createElement('div')//creating an element
+        console.log(div);
+        div.className='container'
+        //div.id='container-id'
+        div.setAttribute('id','container-id') //setting the attributes
+//----------------------('attribute','attribute-name')-----------
+        const addText=document.createTextNode('sai kumar')
+        div.appendChild(addText)
+        document.body.append(div)
+        const h1=document.createElement('h1') 
+        //h1.innerText='welcome'
+        const h1_text=document.createTextNode('welcome to my world')
+        h1.appendChild(h1_text)
+        div.appendChild(h1)
+
+
+    </script>
+</body>
+</html>

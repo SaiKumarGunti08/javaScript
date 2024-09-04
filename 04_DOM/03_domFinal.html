@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #121212; color: aliceblue;">
+    <ul class="language">
+        <li>java script</li>
+    </ul>
+</body>
+<script>
+//tree not traversed (not well optimized) 
+    function addListInUl(programmingLanguages) {
+        const li=document.createElement('li')
+        const ul=document.querySelector('.language')
+        ul.appendChild(li)
+        li.innerText=`${programmingLanguages}`
+        //console.log(ul);   
+    }
+    addListInUl('python')
+//most prefered way (Tree Traversed (optimized for node maniplation) ) 
+    function addingOptimizeList(programmingLanguages) {
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(programmingLanguages))
+        document.querySelector('.language').appendChild(li)
+    }
+addingOptimizeList("c++")
+addingOptimizeList('java')
+
+
+//Editing the value
+//replacing mothods
+
+//m-1
+const secondList=document.querySelector('li:nth-child(2)')
+secondList.innerText='React'
+
+//m-2
+const newli=document.createElement('li')
+newli.textContent='angular'
+secondList.replaceWith(newli)
+
+//m-3
+const frstList=document.querySelector('li:first-child')
+frstList.outerHTML="<li>type Script</li>"
+
+//removing element
+const lastList=document.querySelector('li:last-child')
+lastList.remove()
+
+
+</script>
+</html>

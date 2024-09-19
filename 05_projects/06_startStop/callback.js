@@ -11,8 +11,8 @@ const start=function(){
     },1000)
 }
 const stopp=function() {
-    console.log('interval stopped');
     clearInterval(interval)
+    console.log('interval stopped');
 }
 document.getElementById('but1').addEventListener('click',start)
 document.getElementById('but2').addEventListener('click',stopp)

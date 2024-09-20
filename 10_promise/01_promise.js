@@ -56,22 +56,21 @@ const promiseFour=new Promise(function(reslove,reject) {
 promiseFour.then(function(user) {
     console.log(user);
     return user.username
-    
 }).then(function(username) {
     console.log(username); 
 })
 
-//example 2 using reslove and reject
+//example 2 using reslove and reject (then() catch() finally() )
 
 const promiseFive=new Promise(function(reslove,reject) {
     setTimeout(() => {
         let error=false
         if(!error){
-            reslove({name:'aparna',id:24})  
+            reslove({name:'Aparna',id:24})  
         }else{
             reject('ERROR : something went Wrong')
         }
-    },3000);
+    },2000);
 })
 promiseFive.then(function(wife) {
     console.log(wife);
@@ -80,4 +79,29 @@ promiseFive.then(function(wife) {
 }).catch(function(error) {
     console.log(error);
     
+}).finally(function() {
+    console.log('promise is resloved or rejected'); //finally() is exicuted at any cost even resloved or rejected 
+    
 })
+
+//async and awit method
+
+const promiseSix=new Promise(function(reslove,reject) {
+    setTimeout(() => {
+        let error=false
+        if(!error){
+            reslove({name:'Aparna',id:24})  
+        }else{
+            reject('ERROR : something went Wrong')
+        }
+    },1000);
+})
+
+//async awit doesnt handle errors
+async function consumePromiseSix() {
+    const response = await promiseSix
+    console.log(response);
+    console.log('last');
+    
+    
+}

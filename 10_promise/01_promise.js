@@ -60,3 +60,24 @@ promiseFour.then(function(user) {
 }).then(function(username) {
     console.log(username); 
 })
+
+//example 2 using reslove and reject
+
+const promiseFive=new Promise(function(reslove,reject) {
+    setTimeout(() => {
+        let error=false
+        if(!error){
+            reslove({name:'aparna',id:24})  
+        }else{
+            reject('ERROR : something went Wrong')
+        }
+    },3000);
+})
+promiseFive.then(function(wife) {
+    console.log(wife);
+    console.log(`saikumar's wife name is ${wife.name}`);
+    
+}).catch(function(error) {
+    console.log(error);
+    
+})

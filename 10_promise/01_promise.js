@@ -37,7 +37,7 @@ const promisethree=new Promise(function(reslove,reject) {
     setTimeout(function() {
         console.log('p3 completed');
         reslove({username:'sai',id:1111})
-    },2000)
+    },1000)
 })
 promisethree.then(function(user) {
     console.log(user);
@@ -51,7 +51,7 @@ const promiseFour=new Promise(function(reslove,reject) {
     setTimeout(function() {
         console.log('p4 completed');
         reslove({username:'chintu',id:11})
-    },2000)
+    },1000)
 })
 promiseFour.then(function(user) {
     console.log(user);
@@ -70,7 +70,7 @@ const promiseFive=new Promise(function(reslove,reject) {
         }else{
             reject('ERROR : something went Wrong')
         }
-    },2000);
+    },1000);
 })
 promiseFive.then(function(wife) {
     console.log(wife);
@@ -94,7 +94,7 @@ const promiseSix= new Promise(function(reslove,reject) {
         }else{
             reject('ERROR : something went Wrong')
         }
-    },5000);
+    },1000);
 });
 
                                         //async awit doesnt handle errors
@@ -136,3 +136,18 @@ fetch('https://randomuser.me/api/').then((response)=>{
     console.log("error of data",error);
     
 })
+
+
+/*
+fetch in depth
+                      fetch('somthing') 
+                          /      \
+                         /        \
+data is directly-------data        web browser/ node evn
+not accessable           |                    |
+                         |                    |
+                on fullField[]               network request
+                on rejection[]                    /      \
+                                            success      fail
+
+*/

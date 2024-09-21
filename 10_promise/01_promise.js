@@ -86,22 +86,53 @@ promiseFive.then(function(wife) {
 
 //async and awit method
 
-const promiseSix=new Promise(function(reslove,reject) {
+const promiseSix= new Promise(function(reslove,reject) {
     setTimeout(() => {
-        let error=false
+        let error=true
         if(!error){
-            reslove({name:'Aparna',id:24})  
+            reslove({name:'Aparna0810',id:24})  
         }else{
             reject('ERROR : something went Wrong')
         }
-    },1000);
-})
+    },5000);
+});
 
-//async awit doesnt handle errors
-async function consumePromiseSix() {
-    const response = await promiseSix
-    console.log(response);
-    console.log('last');
+                                        //async awit doesnt handle errors
+async function consumePromiseSix(){
+    // const responsee = await promiseSix
+    // console.log(responsee);
+    // console.log('last');
+
+    try {
+        const reslovee= await promiseSix
+        console.log(reslovee);
+        
+    } catch (error) {
+        console.log(error);
+        
+    }   
+}  
+consumePromiseSix()
+
+// async function getAllData() {
+//     try {
+//         const dataUrl= await(await fetch('https://randomuser.me/api/')).json()
+//         console.log(dataUrl);
+        
+        
+//     } catch (error) {
+//         console.log('E:',error);
+        
+//     }
+// }
+// getAllData()
+
+fetch('https://randomuser.me/api/').then((response)=>{
+    return response.json()
+}).then((data)=>{
+    console.log(data);
     
+}).catch((error)=>{
+    console.log("error of data",error);
     
-}
+})

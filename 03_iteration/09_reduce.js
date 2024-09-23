@@ -12,7 +12,7 @@ const arr1=[1,2,3]
 // },0)
 // console.log(newArr);
 
-
+//here acc is previous value
 const newArr=arr1.reduce( (acc,crval)=>{
     //console.log(`acc value = ${acc} and current value = ${crval}`);
     return acc+crval

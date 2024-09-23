@@ -20,7 +20,7 @@ const user={
 
 function userDetails(username,userId,pass) {
   this.username=username;
-  this.userId=userId;
+  this.userId=userId
   this.pass=pass 
   
   return this //implisitly its default

@@ -1,4 +1,4 @@
-//createing your own prototype methods 
+//createing your own prototype or methods 
 // modern syntax: 
 //object or string or name.prototype.functionname(){}
 

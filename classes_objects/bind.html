@@ -12,6 +12,8 @@
 </div>
 </body>
 <script>
+  const divv=document.getElementById('container')
+  const button=document.querySelector('button')
 
   class user{
     constructor(username){
@@ -24,16 +26,16 @@
 
     }
     theServer(){
-
+      divv.style.backgroundColor='red'
+      divv.append(`${this.username}`)
       console.log("clicked");
-
       console.log(`${this.server}`);
       console.log(`${this.username}`);
     }
   }
-const react=new user("react for sai ")
+const react=new user("React Document ")
 console.log(react);
-react.theServer()
+//react.theServer()  //if user all the events inside exicuted automacically without clicking the button
 
 </script>
 </html>

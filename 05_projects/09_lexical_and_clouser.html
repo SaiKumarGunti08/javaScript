@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lexical and closure scoping</title>
+</head>
+<body>
+
+</body>
+<script>
+let colorArray=["red","green","blue","orange","yellow","pink","#212121"]
+
+
+colorArray.forEach(color => {
+  let button=document.createElement('button')
+button.textContent=`${color}`
+button.id=`${color}`
+document.body.appendChild(button)
+document.getElementById(`${color}`).onclick=clickHandler(`${color}`)
+
+  
+});
+function clickHandler(color) {
+    function bgChange(){
+      document.body.style.backgroundColor=`${color}`
+    }
+    return bgChange 
+  }
+
+
+
+
+
+</script>
+</html>

@@ -27,6 +27,8 @@
 //nested scope unsing functions
 //below inner scope function can access the value of outer scope functon 
 //but outer function cannot access the value nd varibles of inner function
+
+//lexical and clouser
 function one() {
     const name_1="sai"
     function two() {
@@ -54,3 +56,16 @@ const second=function(num) {
     return num-1
 }
 console.log(second(10));
+
+
+//clouser
+//in clouser when the function is returned then not only scope of the function is returned but total lexical scoping is returned
+
+function outer() {
+    let name='sai'
+    function inner() {
+        console.log(name);
+    }
+    return inner
+}
+outer()
